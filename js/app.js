@@ -8,8 +8,7 @@ const regExpEmail =
 submit.addEventListener("click", (e) => {
     e.preventDefault(); // al tener esta opcion, el navegador no ejecuta las validaciones establecidas en el html
     // e.stopPropagation();
-
-    if (!regExpEmail.test(emailInput.value)) {
+    if (!regExpEmail.test(emailInput.value.toLowerCase())) {
         validateMessage.textContent = "Please provide a valid email";
         validateMessage.style.color = "hsl(0, 93%, 68%)";
         validateMessage.style.display = "block";
